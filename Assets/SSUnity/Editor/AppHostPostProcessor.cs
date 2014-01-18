@@ -34,8 +34,13 @@ public class AppHostPostProcessor : AssetPostprocessor
                     {
                         Debug.Log(monoScript.ToJsv());
                         var host = startHost as StartHost;
-                        var hostPath = Path.Combine(Directory.GetCurrentDirectory(), host.webrootPath);
-                        var mf = new MarkdownFormat { VirtualPathProvider = new FileSystemVirtualPathProvider(new TestAppHost(), hostPath) };
+                        var hostPath = Path.Combine(
+                            Directory.GetCurrentDirectory(), host.webrootPath);
+                        var mf = new MarkdownFormat
+                        {
+                            VirtualPathProvider = new FileSystemVirtualPathProvider(
+                                new TestAppHost   (), hostPath)
+                        };
                         var mp = mf.FindMarkdownPages("/");
                         var output = new Dictionary<string, string>();
 

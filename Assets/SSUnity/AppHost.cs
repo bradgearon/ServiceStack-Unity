@@ -6,7 +6,7 @@ using ServiceStack.VirtualPath;
 using ServiceStack.WebHost.Endpoints;
 using UnityEngine;
 
-public class AppHost : AppHostHttpListenerBase
+public class AppHost : AppHostHttpListenerBase, IAppHost
 {
     public Container Funq { get; set; }
 
