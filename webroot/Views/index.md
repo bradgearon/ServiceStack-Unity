@@ -1,0 +1,1 @@
+@Html.Raw("<div ng-view=\"\"></div>");
