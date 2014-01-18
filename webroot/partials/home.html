@@ -1,0 +1,29 @@
+<div class="hero-unit">
+    <h1>Hello, world!</h1>
+    <p>
+        This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. 
+        Use it as a starting point to create something more unique.
+    </p>
+    <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <div class="row">
+        <form name="m" ng-submit="move(m)">
+            <input ng-model="m.x" type="number" class="input input-large" />
+            <input ng-model="m.y" type="number" class="input input-large" />
+            <input ng-model="m.z" type="number" class="input input-large" />
+            <button class="btn btn-large btn-default" tabindex="1">Move</button>
+            <span>{{pos}}</span>
+        </form>
+    </div>
+    <div class="row" jqyoui-droppable data-drag="true">
+        <!--<canvas bag-game-controller="onMove" id="controller" height="300" width="400" ></canvas>-->
+        <img id="dragTarget" jqyoui-draggable="{onDrag: 'onMove', animate: true, index: 0}" data-drag="true" src="img/dpad-image.png" >
+    </div>
+    <div class="row">
+        <div class="panel-heading">Log</div>
+        <div class="panel-body">
+            <div class="row" ng-repeat="log in logs">
+                <div class="alert alert-info">{{log.log}}</div>
+            </div>
+        </div>
+    </div>
+</div>
